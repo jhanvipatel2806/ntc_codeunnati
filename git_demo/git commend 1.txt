@@ -1,0 +1,206 @@
+jhanv@LAPTOP-FB377Q7E MINGW64 ~
+$ pwd
+/c/Users/jhanv
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~
+$ mkdir git_demo
+mkdir: cannot create directory ‘git_demo’: File exists
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~
+$ cd git
+bash: cd: git: No such file or directory
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~
+$
+-
+jhanv@LAPTOP-FB377Q7E MINGW64 ~
+$ cd git_demo/
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo
+$ git init
+Initialized empty Git repository in C:/Users/jhanv/git_demo/.git/
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ ls
+file.txt  file2.py  file3.ipynb
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+        file2.py
+        file3.ipynb
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git add file2.py
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git
+GitHub.UI.Shared.dll                GitLab.dll                          git-flow                            git-upload-archive.exe
+GitHub.UI.exe                       git-askpass.exe                     git-gui.exe                         git-upload-pack.exe
+GitHub.dll                          git-askyesno.exe                    git-lfs.exe                         git.exe
+GitLab.UI.Shared.dll                git-credential-helper-selector.exe  git-receive-pack.exe                gitk
+GitLab.UI.exe                       git-credential-manager-core.exe     git-update-git-for-windows          gitk.exe
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git
+GitHub.UI.Shared.dll                GitLab.dll                          git-flow                            git-upload-archive.exe
+GitHub.UI.exe                       git-askpass.exe                     git-gui.exe                         git-upload-pack.exe
+GitHub.dll                          git-askyesno.exe                    git-lfs.exe                         git.exe
+GitLab.UI.Shared.dll                git-credential-helper-selector.exe  git-receive-pack.exe                gitk
+GitLab.UI.exe                       git-credential-manager-core.exe     git-update-git-for-windows          gitk.exe
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git
+GitHub.UI.Shared.dll                GitLab.dll                          git-flow                            git-upload-archive.exe
+GitHub.UI.exe                       git-askpass.exe                     git-gui.exe                         git-upload-pack.exe
+GitHub.dll                          git-askyesno.exe                    git-lfs.exe                         git.exe
+GitLab.UI.Shared.dll                git-credential-helper-selector.exe  git-receive-pack.exe                gitk
+GitLab.UI.exe                       git-credential-manager-core.exe     git-update-git-for-windows          gitk.exe
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file2.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+        file3.ipynb
+
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git add *
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file.txt
+        new file:   file2.py
+        new file:   file3.ipynb
+
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git commit -m "frist commit"
+[master (root-commit) a82e593] frist commit
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file.txt
+ create mode 100644 file2.py
+ create mode 100644 file3.ipynb
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git branch branch1
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ ls
+file.txt  file2.py  file3.ipynb
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git branch
+  branch1
+* master
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (branch1)
+$ git BRANCH
+fatal: cannot handle BRANCH as a builtin
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (branch1)
+$ git branch
+* branch1
+  master
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (branch1)
+$ git checkout master
+Switched to branch 'master'
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git log
+commit a82e5939725fe7c53f2c2e9b1d08043525c63a6f (HEAD -> master, branch1)
+Author: Jhanvi <jhanvipatel2806@gmail.com>
+Date:   Wed Sep 21 12:42:07 2022 +0530
+
+    frist commit
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git merge branch1
+Already up to date.
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git remote add origin https://github.com/jhanvipatel2806/CodeUnnati.git
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git push remote master
+fatal: 'remote' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git push origin master
+
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 229 bytes | 229.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/jhanvipatel2806/CodeUnnati/pull/new/master
+remote:
+To https://github.com/jhanvipatel2806/CodeUnnati.git
+ * [new branch]      master -> master
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$ git push origin master
+Everything up-to-date
+
+jhanv@LAPTOP-FB377Q7E MINGW64 ~/git_demo (master)
+$
